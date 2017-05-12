@@ -13,6 +13,7 @@ configure(fullJars){ project ->
     }
 
     repositories {
+        mavenLocal()
         mavenCentral()
         jcenter()
     }

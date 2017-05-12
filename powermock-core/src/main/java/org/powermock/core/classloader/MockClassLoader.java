@@ -110,7 +110,7 @@ public abstract class MockClassLoader extends DeferSupportingClassLoader {
     protected abstract Class<?> loadUnmockedClass(String name, ProtectionDomain protectionDomain) throws ClassFormatError, ClassNotFoundException;
     
     private Class<?> loadMockClass(String name, ProtectionDomain protectionDomain) throws ClassNotFoundException {
-        final byte[] clazz = defineAndTransformClass(name);
+        final byte[] clazz = defineAndTransformClass(name, protectionDomain);
     
         return defineClass(name, protectionDomain, clazz);
     }
@@ -128,5 +128,5 @@ public abstract class MockClassLoader extends DeferSupportingClassLoader {
         return wrappedType;
     }
     
-    protected abstract byte[] defineAndTransformClass(final String name) throws ClassNotFoundException;
+    protected abstract byte[] defineAndTransformClass(final String name, final ProtectionDomain protectionDomain) throws ClassNotFoundException;
 }

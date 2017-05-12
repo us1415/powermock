@@ -92,7 +92,7 @@ public class JavassistMockClassLoader extends MockClassLoader {
         return bytes == null ? null : defineClass(name, bytes, 0, bytes.length, protectionDomain);
     }
     
-    protected byte[] defineAndTransformClass(String name) {
+    protected byte[] defineAndTransformClass(String name, ProtectionDomain protectionDomain) {
         final byte[] clazz;
         
         ClassPool.doPruning = false;

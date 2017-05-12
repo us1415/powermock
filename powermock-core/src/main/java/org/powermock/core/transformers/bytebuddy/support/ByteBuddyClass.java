@@ -20,6 +20,7 @@ package org.powermock.core.transformers.bytebuddy.support;
 
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.DynamicType.Builder;
+import net.bytebuddy.pool.TypePool;
 
 public class ByteBuddyClass {
     
