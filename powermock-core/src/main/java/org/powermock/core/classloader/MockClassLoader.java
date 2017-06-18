@@ -31,7 +31,7 @@ import java.security.ProtectionDomain;
  * </p>
  * <ol>
  * <li>system classes. They are deferred to system classloader</li>
- * <li>classes that locate in packages that specified as packages to ignore with using {@link #addIgnorePackage(String...)}</li>
+ * <li>classes that locate in packages that specified as packages to ignore with using {@link MockClassLoaderConfiguration#addIgnorePackage(String...)}</li>
  * </ol>
  * <p>
  * Testing frameworks classes are loaded, but not modified.
@@ -43,6 +43,8 @@ import java.security.ProtectionDomain;
  * @author Johan Haleby
  * @author Jan Kronquist
  * @author Artur Zagretdinov
+ *
+ * @see MockClassLoaderConfiguration
  * @see ClassLoader#getSystemClassLoader()
  * @see IgnorePackagesExtractor
  */
